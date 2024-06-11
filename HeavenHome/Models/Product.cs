@@ -1,4 +1,4 @@
-﻿using HeavenHome.Data;
+﻿using HeavenHome.Data.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace HeavenHome.Models
@@ -13,5 +13,11 @@ namespace HeavenHome.Models
         public double Price { get; set; }
         public string ImageURL { get; set; }
         public ProductCategory ProductCategory { get; set; }
+
+        //relationships
+        public List<Material_Product> Materials_Products { get; set; }
+
+        //company
+        public Company Company { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace HeavenHome.Data
+﻿namespace HeavenHome.Data.Enums
 {
     public enum ProductCategory
     {
