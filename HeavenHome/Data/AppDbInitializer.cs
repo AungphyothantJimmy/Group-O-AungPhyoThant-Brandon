@@ -1,21 +1,23 @@
-﻿namespace HeavenHome.Data;
-using HeavenHome.Data.Enums;
+﻿using HeavenHome.Data.Enums;
 using HeavenHome.Models;
+using Microsoft.AspNetCore.Builder;
 
-
-public class AppDbInitializer
+namespace HeavenHome.Data
 {
-    public static void seed(IApplicationBuilder applicationBuilder)
+    public class AppDbInitializer
     {
-        using (var ServicesScope = applicationBuilder.ApplicationServices.CreateScope())
+        public static void seed(IApplicationBuilder applicationBuilder)
         {
-            var context = ServicesScope.ServiceProvider.GetService<AppDbContext>();
+            using (var ServicesScope = applicationBuilder.ApplicationServices.CreateScope())
+            {
+                var context = ServicesScope.ServiceProvider.GetService<AppDbContext>();
 
-            context.Database.EnsureCreated();
+                context.Database.EnsureCreated();
 
-            //Companies
-            if (!context.Companies.Any()) {
-                context.Companies.AddRange(new List<Company>()
+                //Companies
+                if (!context.Companies.Any())
+                {
+                    context.Companies.AddRange(new List<Company>()
                     {
                         new Company()
                         {
@@ -28,15 +30,15 @@ public class AppDbInitializer
                             Name = "Company 2",
                             Logo = "http://dotnethow.net/images/cinemas/cinema-2.jpeg",
                             Description = "This is the description of the first company"
-                        },
+                        }
                     });
-                context.SaveChanges();
-            }
+                    context.SaveChanges();
+                }
 
-            //Products
-            if (!context.Products.Any())
-            {
-                context.Products.AddRange(new List<Product>()
+                //Products
+                if (!context.Products.Any())
+                {
+                    context.Products.AddRange(new List<Product>()
                     {
                         new Product()
                         {
@@ -49,38 +51,42 @@ public class AppDbInitializer
                         },
                         new Product()
                         {
-                            Name = "Dinning Table",
+                            Name = "Dining Table",
                             Description = "Family table for your meal",
                             Price = 59.90,
                             ImageURL = "http://dotnethow.net/images/movies/movie-1.jpeg",
                             CompanyId = 2,
                             ProductCategory = ProductCategory.Tables
-                        },
+                        }
                     });
-                context.SaveChanges();
-            }
+                    context.SaveChanges();
+                }
 
-            //Materials
-            if (!context.Materials.Any())
-            {
-                context.Materials.AddRange(new List<Material>()
+                //Materials
+                if (!context.Materials.Any())
+                {
+                    context.Materials.AddRange(new List<Material>()
                     {
                         new Material()
                         {
+                            PictureURL = "https://hips.hearstapps.com/hmg-prod/images/rustic-weathered-wood-logs-royalty-free-image-1654709658.jpg",
                             Name = "Wood",
+                            Bio = "Wood's natural beauty and unique grain add warmth and enhance furniture's appeal."
                         },
                         new Material()
                         {
-                            Name = "Iron",
-                        },
+                            PictureURL = "https://poshele.com/cdn/shop/articles/Leather-Finishing_400x.jpg?v=1674420018",
+                            Name = "Leather",
+                            Bio = "Leather is strong and can withstand wear and tear, making it long-lasting."
+                        }
                 });
-                context.SaveChanges();
-            }
+                    context.SaveChanges();
+                }
 
-            //Materials & Products
-            if (!context.Materials_Products.Any())
-            {
-                context.Materials_Products.AddRange(new List<Material_Product>()
+                //Materials & Products
+                if (!context.Materials_Products.Any())
+                {
+                    context.Materials_Products.AddRange(new List<Material_Product>()
                     {
                         new Material_Product()
                         {
@@ -91,11 +97,13 @@ public class AppDbInitializer
                         {
                             MaterialId = 2,
                             ProductId = 4
-                        },
+                        }
                     });
-                context.SaveChanges();
+                    context.SaveChanges();
+                }
             }
         }
+
     }
 
 }
