@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using HeavenHome.Data;
+using HeavenHome.Data.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString"), sqlOptions =>
         sqlOptions.CommandTimeout(60)));
 
+// Services configuration
+builder.Services.AddScoped<IMaterialsService, MaterialsService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -22,6 +25,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -39,5 +43,3 @@ app.MapControllerRoute(
 AppDbInitializer.seed(app);
 
 app.Run();
-
-
