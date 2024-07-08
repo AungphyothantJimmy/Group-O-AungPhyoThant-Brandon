@@ -1,5 +1,6 @@
 ﻿using HeavenHome.Data.Enums;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeavenHome.Models
 {
@@ -18,6 +19,8 @@ namespace HeavenHome.Models
         public List<Material_Product> Materials_Products { get; set; }
 
         //company
+        public int CompanyId { get; set; }
+        [ForeignKey("CompanyId")]
         public Company Company { get; set; }
     }
 }
