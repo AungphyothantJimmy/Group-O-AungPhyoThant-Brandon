@@ -11,31 +11,36 @@ namespace HeavenHome.Data.Services
         {
             _context = context;
         }
-        public void Add(Material material)
+        public async Task AddAsync(Material material)
         {
-            _context.Materials.Add(material);
-            _context.SaveChanges();
+            await _context.Materials.AddAsync(material);
+            await _context.SaveChangesAsync();
         }
 
-        public void Delete(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var result = await _context.Materials.FirstOrDefaultAsync(n => n.Id == id);
+            _context.Materials.Remove(result);
+            await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Material>> GetAll()
+        public async Task<IEnumerable<Material>> GetAllAsync()
         {
             var result = await _context.Materials.ToListAsync();
             return result;
         }
 
-        public Material GetById(int id)
+        public async Task<Material> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var result = await _context.Materials.FirstOrDefaultAsync(n => n.Id == id);
+            return result;
         }
 
-        public Material Update(int id, Material newMaterial)
+        public async Task<Material> UpdateAsync(int id, Material newMaterial)
         {
-            throw new NotImplementedException();
+            _context.Update(newMaterial);
+            await _context.SaveChangesAsync();
+            return newMaterial;
         }
     }
 }
