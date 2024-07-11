@@ -1,4 +1,4 @@
-# Furniture eCommerce Web Application
+# HeavenHome eCommerce Web Application
 
 This is an ASP.NET MVC web application that serves as a third-party platform to sell furniture from various companies. It includes features for customer and admin interactions, such as browsing furniture items, managing a shopping cart, and handling orders. Admin functionalities include managing products, companies, and orders.
 
