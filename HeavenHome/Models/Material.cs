@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using HeavenHome.Data.Base;
+using System.ComponentModel.DataAnnotations;
 
 namespace HeavenHome.Models
 {
-    public class Material
+    public class Material:IEntityBase
     {
         [Key]
         public int Id { get; set; }

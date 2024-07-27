@@ -1,10 +1,11 @@
-﻿using HeavenHome.Data.Enums;
+﻿using HeavenHome.Data.Base;
+using HeavenHome.Data.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HeavenHome.Models
 {
-    public class Product
+    public class Product:IEntityBase
     {
         [Key]
         public int Id { get; set; }
