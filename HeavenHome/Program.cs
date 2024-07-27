@@ -11,6 +11,8 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(buil
 
 // Services configuration
 builder.Services.AddScoped<IMaterialsService, MaterialsService>();
+builder.Services.AddScoped<ICompaniesService, CompaniesService>();
+builder.Services.AddScoped<IProductsService, ProductsService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
