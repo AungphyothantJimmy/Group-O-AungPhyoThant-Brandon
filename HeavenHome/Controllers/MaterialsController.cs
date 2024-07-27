@@ -28,7 +28,6 @@ namespace HeavenHome.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
 
         public async Task<IActionResult> Create([Bind("Name,PictureURL,Bio")] Material material)
         {
