@@ -1,13 +1,9 @@
-﻿using HeavenHome.Models;
+﻿using HeavenHome.Data.Base;
+using HeavenHome.Models;
 
 namespace HeavenHome.Data.Services
 {
-    public interface IMaterialsService
+    public interface IMaterialsService:IEntityBaseRepository<Material>
     {
-        Task<IEnumerable<Material>> GetAllAsync();
-        Task<Material> GetByIdAsync(int id);
-        Task AddAsync(Material material);
-        Task<Material> UpdateAsync(int id, Material newMaterial);
-        Task DeleteAsync(int id);
     }
 }
