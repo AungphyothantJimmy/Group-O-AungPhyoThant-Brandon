@@ -2,5 +2,6 @@
 {
     public class TestingClass
     {
+        Console.WriteLine("hello");
     }
 }
