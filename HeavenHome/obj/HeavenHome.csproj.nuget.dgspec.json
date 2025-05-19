@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DEll\\Desktop\\HeavenHome\\HeavenHome\\HeavenHome.csproj": {}
+    "C:\\Users\\DEll\\OneDrive\\Desktop\\HeavenHome\\HeavenHome\\HeavenHome.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DEll\\Desktop\\HeavenHome\\HeavenHome\\HeavenHome.csproj": {
+    "C:\\Users\\DEll\\OneDrive\\Desktop\\HeavenHome\\HeavenHome\\HeavenHome.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DEll\\Desktop\\HeavenHome\\HeavenHome\\HeavenHome.csproj",
+        "projectUniqueName": "C:\\Users\\DEll\\OneDrive\\Desktop\\HeavenHome\\HeavenHome\\HeavenHome.csproj",
         "projectName": "HeavenHome",
-        "projectPath": "C:\\Users\\DEll\\Desktop\\HeavenHome\\HeavenHome\\HeavenHome.csproj",
+        "projectPath": "C:\\Users\\DEll\\OneDrive\\Desktop\\HeavenHome\\HeavenHome\\HeavenHome.csproj",
         "packagesPath": "C:\\Users\\DEll\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DEll\\Desktop\\HeavenHome\\HeavenHome\\obj\\",
+        "outputPath": "C:\\Users\\DEll\\OneDrive\\Desktop\\HeavenHome\\HeavenHome\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\DEll\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -48,6 +49,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -69,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
