@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HeavenHome")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bb29aa43ca6f0bc038609febd13a59c45a8f6e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+369412697374cb8d11f59d676fd4f201d76470ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("HeavenHome")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HeavenHome")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
